@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:background="@android:color/holo_green_dark">
+    <RelativeLayout
+
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              >
+
+        <india.eva.com.goldenspiral.ui.customui.TypefacedTextView
+        android:id="@+id/company_key_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/company_key"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:layout_marginLeft="@dimen/margin_20dp"/>
+
+
+        <india.eva.com.goldenspiral.ui.customui.TypefacedTextView
+                android:id="@+id/email"
+                android:layout_below="@id/company_key_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:layout_marginLeft="@dimen/margin_20dp"/>
+
+
+        <india.eva.com.goldenspiral.ui.customui.TypefacedTextView
+                android:id="@+id/email"
+                android:layout_below="@id/company_key_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:layout_marginLeft="@dimen/margin_20dp"/>
+
+
+        <india.eva.com.goldenspiral.ui.customui.TypefacedTextView
+                android:id="@+id/email"
+                android:layout_below="@id/company_key_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:layout_marginLeft="@dimen/margin_20dp"/>
+        
+
+    </RelativeLayout>
+</ScrollView>
