@@ -13,4 +13,10 @@ public class SharedPreferencesManager {
         final SharedPreferences preferences = c.getSharedPreferences(key, Context.MODE_PRIVATE);
         return preferences.getBoolean(key, false);
     }
+    public static void set(final Context c, final String key, final boolean value) {
+        final SharedPreferences preferences = c.getSharedPreferences(key, Context.MODE_PRIVATE);
+        final SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean(key, value);
+        editor.commit();
+    }
 }

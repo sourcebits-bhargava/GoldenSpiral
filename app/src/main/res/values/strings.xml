@@ -31,5 +31,17 @@
     <string name="blog">Blog</string>
     <string name="sign_up">Sign Up</string>
 
+    <string name="screen_one_title">Eva Desk</string>
+    <string name="screen_two_title">TURN MY CUSTOMERS TO FANS</string>
+    <string name="screen_three_title">Customer support right on business application</string>
+    <string name="screen_four_title">media</string>
+
+
+    <string name="screen_one_subtitle">Subtitle1</string>
+    <string name="screen_two_subtitle">Subtitle2</string>
+    <string name="screen_three_subtitle">Subtitle3</string>
+    <string name="screen_four_subtitle">Subtitle4</string>
+    <string name="get_started">let\'s get started</string>
+
 
 </resources>

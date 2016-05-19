@@ -15,7 +15,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/margin_100dp"
                 android:text="@string/price"
-     
+
                 />
 
         <india.eva.com.goldenspiral.ui.customui.TypefacedButton
@@ -37,7 +37,7 @@
                 />
 
         <india.eva.com.goldenspiral.ui.customui.TypefacedButton
-                android:id="@+id/blog_tv"
+                android:id="@+id/blog_bt"
                 android:layout_below="@id/value_bt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
 
         <india.eva.com.goldenspiral.ui.customui.TypefacedButton
                 android:id="@+id/sign_up_bt"
-                android:layout_below="@id/blog_tv"
+                android:layout_below="@id/blog_bt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sign_up"

@@ -1,8 +1,10 @@
 package india.eva.com.goldenspiral.ui.activities;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
 
 import india.eva.com.goldenspiral.R;
@@ -12,17 +14,16 @@ import india.eva.com.goldenspiral.util.SharedConstants;
 /**
  * Created by bhargavagugamsetty on 17/05/16.
  */
-public class SplashActivity extends BaseActivity {
+public class SplashActivity extends AppCompatActivity {
     public static final long mSplashTimeDelay = 2 * 1000;
     private Handler mHandler = null;
     private SplashRunnableThread mSplashRunnableThread = null;
-    private static final String TAG = "SplashActivity.class";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_splash_layout);
+        setContentView(R.layout.activity_splash);
         initFields();
 
     }
@@ -58,11 +59,15 @@ public class SplashActivity extends BaseActivity {
         public void run() {
             Boolean isFirstLaunch = SharedPreferencesManager.getBoolean(SplashActivity.this, SharedConstants.IS_FIRST_LAUNCH);
             if (!isFirstLaunch) {
-                Intent intent = new Intent(SplashActivity.this, HomeActivity.class);
+                Intent intent = new Intent(SplashActivity.this, TutorialActivity.class);
                 startActivity(intent);
                 finish();
             }
-
+            else{
+                Intent intent = new Intent(SplashActivity.this, SignupActivity.class);
+                startActivity(intent);
+                finish();
+            }
 
         }
     }
