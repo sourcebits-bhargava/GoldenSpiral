@@ -8,13 +8,14 @@ import india.eva.com.goldenspiral.R;
 /**
  * Created by bhargavagugamsetty on 17/05/16.
  */
-public class ContactActivity extends Activity {
+public class ContactActivity extends BaseActivity {
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
+        setActionbarTitle(getString(R.string.contact_us), true, R.id.contact_tb);
     }
 
     @Override

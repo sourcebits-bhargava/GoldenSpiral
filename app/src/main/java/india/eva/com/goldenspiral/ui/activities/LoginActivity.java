@@ -34,6 +34,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         mSignUp.setOnClickListener(this);
 
         mterms = (CheckBox) findViewById(R.id.accept_cb);
+        mterms.setOnClickListener(this);
 
 
     }

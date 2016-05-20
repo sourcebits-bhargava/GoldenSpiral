@@ -15,6 +15,7 @@ public class ValueActivity extends BaseActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_value);
+        setActionbarTitle(getString(R.string.value), true, R.id.value_tb);
 
     }
 

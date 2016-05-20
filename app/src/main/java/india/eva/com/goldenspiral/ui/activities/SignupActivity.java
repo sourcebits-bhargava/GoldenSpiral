@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import india.eva.com.goldenspiral.R;
 
 /**
@@ -12,14 +15,14 @@ import india.eva.com.goldenspiral.R;
  */
 public class SignupActivity extends BaseActivity{
     private String mCompName;
-    private String mplan;
+    private String mPlan;
     private String mAdminName;
-    private String memail;
-    private String mphoneNo;
+    private String mEmail;
+    private String mPhoneNo;
     private String mPass;
     private String mPhrase;
-    private EditText mcompanyNameEt;
-    private EditText mplanEt;
+    private EditText mCompanyNameEt;
+    private EditText mPlanEt;
     private EditText mAdminNameEt;
     private EditText memailEt;
     private EditText mphoneNoEt;
@@ -32,29 +35,72 @@ public class SignupActivity extends BaseActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
         setActionbarTitle(getString(R.string.sign_up), true, R.id.sign_up_tb);
-        mcompanyNameEt = (EditText) findViewById(R.id.company_name_et);
-        mplanEt =  (EditText) findViewById(R.id.plan_et);
+
+
+        mCompanyNameEt = (EditText) findViewById(R.id.company_name_et);
+        mPlanEt =  (EditText) findViewById(R.id.plan_et);
         mAdminNameEt = (EditText) findViewById(R.id.admin_et);
         memailEt = (EditText) findViewById(R.id.email_et);
         mphoneNoEt = (EditText) findViewById(R.id.phone_et);
         mPassEt = (EditText) findViewById(R.id.password_et);
         mPhraseEt = (EditText) findViewById(R.id.pass_phrase_et);
 
-        mCompName = mcompanyNameEt.getText().toString();
-        mplan = mplanEt.getText().toString();
+        mCompName = mCompanyNameEt.getText().toString();
+        mPlan = mPlanEt.getText().toString();
         mAdminName = mAdminNameEt.getText().toString();
-        memail = memailEt.getText().toString();
-        mphoneNo = mphoneNoEt.getText().toString();
+        mEmail = memailEt.getText().toString();
+        mPhoneNo = mphoneNoEt.getText().toString();
         mPass = mPassEt.getText().toString();
         mPhrase = mPhraseEt.getText().toString();
         // validation
-        if(isValidCompany(mCompName))
-            mCompName.setError("Invalid Age. Valid age: 18 to 100");
+        isValidCompany(mCompName);
 
-         if(isValidplan(mplan))
+        isValidPlan(mPlan);
 
-             if(isValidAdmin(mAdminName))
+        isValidAdmin(mAdminName);
 
+        isValidEmail(mEmail);
+
+        isValidPhoneNo(mPhoneNo);
+
+    }
+
+    private void isValidPhoneNo(String phoneNo) {
+
+
+    }
+
+    private boolean isValidEmail(String email) {
+        String EMAIL_PATTERN =  "^[A-Za-z0-9._%+\\-]+@[A-Za-z0-9.\\-]+\\.[A-Za-z]{2,4}$";
+
+        Pattern pattern = Pattern.compile(EMAIL_PATTERN);
+        Matcher matcher = pattern.matcher(email);
+        if (!matcher.find()) {
+            return false;
+        }else {
+            return true;
+        }
+
+    }
+
+    private void isValidAdmin(String adminName) {
+
+    }
+
+    private void isValidPlan(String plan) {
+
+    }
+
+    private boolean isValidCompany(String compName) {
+
+
+        if (compName.length() < 100 && compName.length() >= 3) {
+            // mCompany.setError("company name should be less than 100 characters");
+            return false;
+
+        } else {
+            return true;
+        }
 
     }
 
