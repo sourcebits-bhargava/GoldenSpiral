@@ -28,9 +28,7 @@
             android:padding="@dimen/margin_10dp"
             android:text="@string/skip"
             android:textAllCaps="true"
-
-            android:textSize="@dimen/margin_20dp"
-            />
+            android:textSize="@dimen/margin_20dp"/>
 
 </RelativeLayout>
         <!-- android:textColor="@color/white"-->

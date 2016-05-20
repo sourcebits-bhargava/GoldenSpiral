@@ -7,10 +7,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import india.eva.com.goldenspiral.R;
 
-public class HomeActivity extends AppCompatActivity implements View.OnClickListener{
+public class HomeActivity extends BaseActivity implements View.OnClickListener{
 
 
     private Button mprice,mContact,mValue,mBlog,mSign,mLogin;
@@ -22,22 +23,24 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        setActionbarTitle(getString(R.string.home), true, R.id.home_tb);
+
         mprice = (Button)findViewById(R.id.price_bt);
         mprice.setOnClickListener(this);
 
-        mContact = (Button)findViewById(R.id.price_bt);
+        mContact = (Button)findViewById(R.id.contact_bt);
         mContact.setOnClickListener(this);
 
-        mValue = (Button)findViewById(R.id.price_bt);
+        mValue = (Button)findViewById(R.id.value_bt);
         mValue.setOnClickListener(this);
 
-        mBlog = (Button)findViewById(R.id.price_bt);
+        mBlog = (Button)findViewById(R.id.blog_bt);
         mBlog.setOnClickListener(this);
 
-        mSign = (Button)findViewById(R.id.price_bt);
+        mSign = (Button)findViewById(R.id.sign_up_bt);
         mSign.setOnClickListener(this);
 
-        mLogin = (Button)findViewById(R.id.price_bt);
+        mLogin = (Button)findViewById(R.id.login_bt);
         mLogin.setOnClickListener(this);
 
 
@@ -71,21 +74,27 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.price_bt:
                 Intent priceIntent = new Intent(this, PriceActivity.class);
                 startActivity(priceIntent);
+                break;
             case R.id.contact_us_bt:
                 Intent contactIntent = new Intent(this, ContactActivity.class);
                 startActivity(contactIntent);
+                break;
             case R.id.value_bt:
                 Intent valueIntent = new Intent(this, ValueActivity.class);
                 startActivity(valueIntent);
+                break;
             case R.id.blog_bt:
                 Intent blogIntent = new Intent(this, BlogActivity.class);
                 startActivity(blogIntent);
+                break;
             case R.id.sign_up_bt:
                 Intent signIntent = new Intent(this, SignupActivity.class);
                 startActivity(signIntent);
+                break;
             case R.id.login_bt:
                 Intent loginIntent = new Intent(this, LoginActivity.class);
                 startActivity(loginIntent);
+                break;
 
 
         }

@@ -5,66 +5,62 @@
                 android:background="@android:color/holo_green_dark"
                 tools:context=".MainActivity">
 
-    <RelativeLayout android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
 
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/home_tb"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/holo_blue_dark" />
         <india.eva.com.goldenspiral.ui.customui.TypefacedButton
                 android:id="@+id/price_bt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/margin_100dp"
-                android:text="@string/price"
-
-                />
+                android:text="@string/price" />
 
         <india.eva.com.goldenspiral.ui.customui.TypefacedButton
                 android:id="@+id/contact_bt"
                 android:layout_below="@id/price_bt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contact"
-
-                />
+                android:layout_centerHorizontal="true"
+                android:clickable="true"
+                android:text="@string/contact" />
 
         <india.eva.com.goldenspiral.ui.customui.TypefacedButton
                 android:id="@+id/value_bt"
                 android:layout_below="@id/contact_bt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Value"
-
-                />
+                android:layout_centerHorizontal="true"
+                android:text="@string/value"/>
 
         <india.eva.com.goldenspiral.ui.customui.TypefacedButton
                 android:id="@+id/blog_bt"
                 android:layout_below="@id/value_bt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/blog"
-
-                />
+                android:layout_centerHorizontal="true"
+                android:text="@string/blog"/>
 
         <india.eva.com.goldenspiral.ui.customui.TypefacedButton
                 android:id="@+id/sign_up_bt"
                 android:layout_below="@id/blog_bt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/sign_up"
-
-                />
+                android:clickable="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/sign_up"/>
         <india.eva.com.goldenspiral.ui.customui.TypefacedButton
                 android:id="@+id/login_bt"
                 android:layout_below="@+id/sign_up_bt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/login"
-
-
-                />
-
-
-
+                android:layout_centerHorizontal="true"
+                android:text="@string/login"/>
 
     </RelativeLayout>
 

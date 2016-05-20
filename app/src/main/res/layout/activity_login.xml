@@ -3,11 +3,18 @@
             android:layout_height="match_parent"
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:background="@android:color/holo_green_dark">
+
     <RelativeLayout
 
               android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              >
+              android:layout_height="match_parent">
+
+
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/login_tb"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/holo_blue_dark" />
 
         <india.eva.com.goldenspiral.ui.customui.TypefacedEditText
         android:id="@+id/company_key_tv"
@@ -65,6 +72,7 @@
         <india.eva.com.goldenspiral.ui.customui.TypefacedTextView
                 android:id="@+id/forgot_pass_tv"
                 android:layout_below="@id/login_bt"
+                android:layout_alignParentLeft="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/forgot_password"
@@ -74,10 +82,20 @@
                 android:layout_toRightOf="@id/forgot_pass_tv"
                 android:layout_below="@id/login_bt"
                 android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
                 android:layout_marginLeft="@dimen/margin_40dp"
                 android:layout_marginTop="@dimen/margin_20dp"
                 android:layout_height="wrap_content"
                 android:text="@string/reset_password"/>
+        <india.eva.com.goldenspiral.ui.customui.TypefacedTextView
+                android:id="@+id/sign_up_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/forgot_pass_tv"
+                android:text="@string/sign_up"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:layout_marginBottom="@dimen/margin_20dp"
+                android:layout_centerInParent="true"/>
 
     </RelativeLayout>
 </ScrollView>
